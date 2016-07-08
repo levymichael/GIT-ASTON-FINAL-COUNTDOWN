@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="MonApplication">
+<head>
+	<meta charset="utf-8">     
+	<title>AngularJS</title> 
+	<style type="text/css">.ma-class{color:red;
+		}
+	</style>
+</head>
+<body ng-controller="MonControleur">
+
+
+
+	<h1>Bonjour {{ name }}</h1> <input type="text" ng-model="name">
+
+		<ng-views></ng-views>
+	
+		<div ng-controller="SonCrtl">
+			{{prenom}}
+			<input type="text" ng-model="prenom" ng-model-options="{ updateOn:'blur',debounce: 5000 }">
+			<li ng-repeat="(key,val) in tab">
+				ligne: {{key}} - {{$index}}valeur:{{val}}
+			</li>
+			<button ng-click="action()">say hello!</button>
+		</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript" src="app/config/app.js"></script>
+    <script type="text/javascript" src="app/src/controllers/controller.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="utf-8">
+
+<title>AngularJs Course - IKNSA</title>
+
+<link rel="stylesheet" href="styles/bootstrap.min.css">
+<link rel="stylesheet" href="styles/todo.css">
+
+</head>
+
+<body ng-app="monModule" class="container">
+	<div ng-controller="monCtrl">
+		<h1>TODO LIST</h1>renseigner votre tache:
+		<input type="text"  ng-model="todoList" class="form-control"> <!-- ng-model pour créer un champs à renseigner class apelle les formes bootstrap du champs-->
+		<button  ng-click="pushTheButton()" class="btn btn-success"> PressButton </button> 
+	</div>
+
+
+<script src="js/angular.min.js"></script>
+<script src="js/todo.js"></script>
+<script src="bower/angular.min.js"></script>
+
+</body>
+
+</html>
